@@ -7,7 +7,7 @@ module.exports = {
   mode: "development",
 
   module: {
-   rules: [
+    rules: [
       {
         test: /\.scss$/i,
         use: [
@@ -18,20 +18,11 @@ module.exports = {
           // Compiles Sass to CSS
           'sass-loader',
         ],
-      }, {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
       }
     ],
   },
 
   plugins: [
-   new HtmlWebpackPlugin({ template: path.join(__dirname, "index.html") }),
- ]
+    new HtmlWebpackPlugin({ template: path.join(__dirname, "index.html") }),
+  ]
 };
