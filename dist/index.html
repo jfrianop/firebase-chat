@@ -2,62 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat MKR</title>
 </head>
 
 <body>
-  <div class="container-fluid h-100">
-    <div class="row justify-content-center h-100">
-      <div class="chat-box d-flex flex-row">
-        <div class="user-list bg-dark">
-          <ul class="list-group">
-          </ul>
-        </div>
-        <div class="chat flex-fill">
-          <div class="message-container">
-            <div class="message-header">
-              <div class="message-name">
-                Nombre
-              </div>
-              <div class="message-date">
-                Fecha
-              </div>
-            </div>
-            <div class="message-content">
-              Abajo
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="chat">
+        <div class="chat-messages">
+            <ul class="list-group">
 
-  <!-- Handlebar User -->
-  <script id="user-template" type="text/x-handlebars-template">
-    <li user-id="{{id}}" class="{{status}} list-group-item d-flex flex-row text-white">
-      <div class="circle align-self-center mr-2"></div>
-      {{name}}
-    </li>
-  </script>
-
-  <!-- Handlebar Message -->
-  <script id="message-template" type="text/x-handlebars-template">
-    <div class="message-container">
-      <div class="message-header">
-        <div class="message-name">
-          {{name}}
+            </ul>
         </div>
-        <div class="message-date">
-          {{date}}
+        <div class="chat-sender">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Escribe tu mensaje bb :3" aria-label="Mensaje"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn send-message btn-outline-secondary" type="button"
+                        id="button-addon2">Enviar</button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="message-content">
-        {{body}}
-      </div>
     </div>
-  </script>
 <script type="text/javascript" src="main.js"></script></body>
 
 </html>
